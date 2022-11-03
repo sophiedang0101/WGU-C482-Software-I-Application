@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1185.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c482project.AddProductController">
+    <children>
+        <Label fx:id="addProductTitleLabel" layoutX="67.0" layoutY="53.0" text="Add Product Form">
+            <font>
+                <Font name="JetBrains Mono Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductIDLabel" layoutX="64.0" layoutY="145.0" text="ProductID">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductNameLabel" layoutX="64.0" layoutY="195.0" text="Product Name">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductInvLabel" layoutX="64.0" layoutY="245.0" text="Inventory">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductPriceLabel" layoutX="68.0" layoutY="295.0" text="Price">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductMaxLabel" layoutX="67.0" layoutY="350.0" text="MAX">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductMinLabel" layoutX="67.0" layoutY="406.0" text="MIN">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addProductIDTextField" disable="true" editable="false" layoutX="208.0" layoutY="137.0" prefHeight="35.0" text="Auto Generated" />
+        <TextField fx:id="addProductNameTextField" layoutX="208.0" layoutY="187.0" prefHeight="35.0" />
+        <TextField fx:id="addProductInvTextField" layoutX="208.0" layoutY="237.0" prefHeight="35.0" prefWidth="160.0" />
+        <TextField fx:id="addProductPriceTextField" layoutX="207.0" layoutY="287.0" prefHeight="35.0" prefWidth="161.0" />
+        <TextField fx:id="addProductMaxTextField" layoutX="208.0" layoutY="342.0" prefHeight="35.0" prefWidth="160.0" />
+        <TextField fx:id="addProductMinTextField" layoutX="208.0" layoutY="398.0" prefHeight="35.0" prefWidth="160.0" />
+        <TableView fx:id="productAddPartsTable" layoutX="572.0" layoutY="95.0" prefHeight="220.0" prefWidth="530.0">
+            <columns>
+                <TableColumn fx:id="addTablePartIDCol" prefWidth="110.0" text="Part ID" />
+                <TableColumn fx:id="addTablePartNameCol" prefWidth="155.0" text="Part Name" />
+                <TableColumn fx:id="addTableInvLevelCol" prefWidth="130.0" text="Inventory Level" />
+                <TableColumn fx:id="addTablePriceCol" prefWidth="140.0" text="Price/ Cost Per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="productAssociatedPartsTable" layoutX="572.0" layoutY="406.0" prefHeight="220.0" prefWidth="530.0">
+            <columns>
+                <TableColumn fx:id="associatedPartIDCol" prefWidth="110.0" text="Part ID" />
+                <TableColumn fx:id="associatedPartNameCol" prefWidth="155.0" text="Part Name" />
+                <TableColumn fx:id="associatedPartInvCol" prefWidth="130.0" text="Inventory Level" />
+                <TableColumn fx:id="associatedPartPriceCol" prefWidth="140.0" text="Price/ Cost Per Unit" />
+            </columns>
+        </TableView>
+        <Button fx:id="addProductAddButton" layoutX="916.0" layoutY="327.0" mnemonicParsing="false" onAction="#addProductAddButtonClicked" text=" Add Associated Part">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="addProductDeleteAssociatedPartButton" layoutX="899.0" layoutY="636.0" mnemonicParsing="false" onAction="#addProductDeletePartButtonClicked" text="Delete Associated Part">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="addProductCancelButton" layoutX="1009.0" layoutY="700.0" mnemonicParsing="false" onAction="#addProductCancelButtonClicked" text="Cancel">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+
+        </Button>
+        <Button fx:id="addProductSaveButton" layoutX="1113.0" layoutY="700.0" mnemonicParsing="false" onAction="#addProductSaveButtonClicked" text="Save">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Button>
+        <TextField fx:id="addProductSearchTextField" layoutX="915.0" layoutY="53.0" onAction="#addProductSearchFieldClicked" onKeyPressed="#addProductSearchBarClicked" opacity="0.5" prefHeight="26.0" prefWidth="187.0" promptText="Search by Part ID or Name" />
+        <Label fx:id="addProductSearchPartLabel" layoutX="572.0" layoutY="67.0" text="Search Part">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="addProductAssociatedPartsLabel" layoutX="572.0" layoutY="378.0" text="Associated Parts">
+            <font>
+                <Font name="JetBrains Mono Regular" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
